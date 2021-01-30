@@ -1,11 +1,22 @@
 # 友達の卒業研究手伝い
 
+### 起動方法
+
 PowerShellを開きます  
 ↓のコードを順番に打ち込みます
 
 ```
 git clone https://github.com/Micchili/code-for-graduate-chord003
 cd code-for-graduate-chord003
+npm install
+npm start
+```
+
+### ファイルを変更したとき
+```
+PowerShellを開く
+cd code-for-graduate-chord003
+git pull origin master
 npm install
 npm start
 ```

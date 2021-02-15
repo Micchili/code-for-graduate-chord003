@@ -22,12 +22,10 @@ class TransformerWrap extends React.Component {
 
     }
     checkNode() {
-        // here we need to manually attach or detach Transformer node
         const stage = this.transformer.getStage();
         const {selectedShapeName} = this.props;
 
         var selectedNode = stage.findOne("." + selectedShapeName);
-        // do nothing if selected node is already attached
         if (selectedNode === this.transformer.node()) {
             return;
         }
@@ -36,10 +34,8 @@ class TransformerWrap extends React.Component {
             if (type != "Group") {
                 selectedNode = selectedNode.findAncestor("Group");
             }
-            // attach to another node
             this.transformer.attachTo(selectedNode);
         } else {
-            // remove transformer
             this.transformer.detach();
         }
 

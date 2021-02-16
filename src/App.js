@@ -5,7 +5,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import { Stage, Layer, Group, Image } from 'react-konva';
 // 簡単に画像を扱えるようにするライブラリ
 import useImage from "use-image"
-ＣＳＳを簡単に扱えるようにするライブラリ
+// ＣＳＳを簡単に扱えるようにするライブラリ
 import styled from "styled-components"
 
 // コンポーネントimport層
@@ -278,8 +278,9 @@ const App = () => {
 
 export default App
 
-// Reactの思想とは間違っているが、現状ダウンロードする方法がこれしかない
+// 画像をダウンロードする
 // aタグでURIを作成し、クリックされたら画像を作成出来る
+// Reactの思想とは間違っているが、現状ダウンロードする方法がこれしかない
 function downloadURI(uri, imageName) {
   const link = document.createElement("a");
   link.download = imageName;

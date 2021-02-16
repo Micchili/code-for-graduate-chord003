@@ -2,6 +2,7 @@ import React from "react"
 import { Transformer } from "react-konva"
 
 class TransformerWrap extends React.Component {
+    // コンポーネントがクリックされたかチェックする
     componentDidMount() {
         this.checkNode();
     }
@@ -9,22 +10,15 @@ class TransformerWrap extends React.Component {
         this.checkNode();
     }
 
-    onTransformStart() {
-        console.log('onTransformStart');
-    }
-
-    onTransform() {
-        console.log('onTransform');
-    }
-
-    onTransformEnd() {
-        console.log('end transform');
-
-    }
+    // クリックされたかを検知する
     checkNode() {
+        // stageの変更を感知する
         const stage = this.transformer.getStage();
+
+        // 親からもらったClassNameを受け継ぐ
         const {selectedShapeName} = this.props;
 
+        // もしClassNameが同じであれば、動かせるようにする
         var selectedNode = stage.findOne("." + selectedShapeName);
         if (selectedNode === this.transformer.node()) {
             return;
@@ -38,7 +32,6 @@ class TransformerWrap extends React.Component {
         } else {
             this.transformer.detach();
         }
-
         this.transformer.getLayer().batchDraw();
     }
     render() {
@@ -47,9 +40,6 @@ class TransformerWrap extends React.Component {
                 ref={node => {
                     this.transformer = node;
                 }}
-                transformstart={this.onTransformStart}
-                transform={this.onTransform}
-                transformend={this.onTransformEnd}
             />
         );
     }

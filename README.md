@@ -1,4 +1,4 @@
-# 友達の卒業研究手伝い
+# 画像を二枚重ねるだけの簡単なアプリ
 
 ### 起動方法
 
@@ -12,17 +12,4 @@ npm install
 npm start
 ```
 
-### ファイルを変更したとき
-```
-PowerShellを開く
-cd code-for-graduate-chord003
-git pull origin master
-npm install
-npm start
-```
-
-ブラウザが開いてhttps://localhost:3000 が出てきます  
-教授に見せます  
-あなたは卒業をすることができる
-
-## おしり
+ブラウザが開いてhttps://localhost:3000 を見ます

@@ -7,7 +7,7 @@ PowerShellを開きます
 
 ```
 git clone https://github.com/Micchili/image-processing-app
-cd code-for-graduate-chord003
+cd image-processing-app
 npm install
 npm start
 ```

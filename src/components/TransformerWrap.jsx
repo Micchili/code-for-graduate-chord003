@@ -20,7 +20,7 @@ class TransformerWrap extends React.Component {
         }
         if (selectedNode) {
             const type = selectedNode.getType();
-            if (type != "Group") {
+            if (type !== "Group") {
                 selectedNode = selectedNode.findAncestor("Group");
             }
             this.transformer.attachTo(selectedNode);

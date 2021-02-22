@@ -12,7 +12,7 @@ class TransformerWrap extends React.Component {
     checkNode() {
         const stage = this.transformer.getStage();
 
-        const {selectedShapeName} = this.props;
+        const { selectedShapeName } = this.props;
 
         let selectedNode = stage.findOne("." + selectedShapeName);
         if (selectedNode === this.transformer.node()) {

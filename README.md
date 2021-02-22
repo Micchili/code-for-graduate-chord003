@@ -6,8 +6,8 @@ PowerShellを開きます
 ↓のコードを順番に打ち込みます
 
 ```
-git clone https://github.com/Micchili/code-for-graduate-chord003
-cd code-for-graduate-chord003
+git clone https://github.com/Micchili/image-processing-app
+cd image-processing-app
 npm install
 npm start
 ```
